@@ -10,6 +10,7 @@ Team Name: **TBD**
 * Jon Sorey
 * Tyler Gaines
 * saaqib shaik
+* Preethi Seereddy
 
 ### Statement of Work:
 Our project is ______.
