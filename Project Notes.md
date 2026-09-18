@@ -29,6 +29,10 @@
 		1. Managers should see all of their projects, and staff
 			1. Staff should just see their own performance
 	2. Partners/Managers should see bid hours, current hours, hourly rates, total team performance as well as the performance of individuals (probably a drop down menu)
+9. Soft Deadline adder?
+    - assign soft deadlines to certain members
+    - allow users to check off if theyve completed their specific soft deadline
+    - could connect to the calendar linkage
 
 ## Ideas
 1. Chat feature in app
