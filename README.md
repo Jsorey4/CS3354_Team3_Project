@@ -8,6 +8,7 @@ Team Name: **TBD**
 
 ### Team Names
 * Jon Sorey
+* Tyler Gaines
 
 
 ### Statement of Work:
