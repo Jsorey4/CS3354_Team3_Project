@@ -11,6 +11,7 @@ Team Name: **TBD**
 * Tyler Gaines
 * saaqib shaik
 * Preethi Seereddy
+* Myoram Langwang
 
 ### Statement of Work:
 Our project is ______.
