@@ -4,7 +4,7 @@ Professor: Srimathi Srinivasan
 ## Team Details:
 
 Team #3
-Team Name: **TBD**
+Team Name: Eleet Coderz
 
 ### Team Names
 * Jon Sorey
