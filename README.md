@@ -12,6 +12,7 @@ Team Name: **TBD**
 * saaqib shaik
 * Preethi Seereddy
 * Myoram Langwang
+* Aashwat Singh
 
 ### Statement of Work:
 Our project is ______.
