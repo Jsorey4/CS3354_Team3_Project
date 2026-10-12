@@ -1,6 +1,7 @@
 # ProjectForge
 
 **Class:** CS 3354.001 – Software Engineering - Fall 2026
+
 **Professor:** Srimathi Srinivasan
 
 ## Team Details
