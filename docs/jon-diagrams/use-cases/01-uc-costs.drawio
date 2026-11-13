@@ -1,0 +1,80 @@
+<mxfile host="Electron" agent="ProjectForge - Jon Sorey">
+  <diagram id="01-uc-costs" name="01-uc-costs">
+    <mxGraphModel dx="1850" dy="1011" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="background" parent="1" style="rounded=0;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=22;fontStyle=0;fontColor=#18324B;fillColor=#FFFFFF;strokeColor=none;strokeWidth=2;align=left;verticalAlign=top;spacing=16;locked=1;" value="" vertex="1">
+          <mxGeometry height="1000" width="1600" as="geometry" />
+        </mxCell>
+        <mxCell id="header" parent="1" style="rounded=0;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=22;fontStyle=0;fontColor=#18324B;fillColor=#16324B;strokeColor=none;strokeWidth=2;align=left;verticalAlign=top;spacing=16;locked=1;" value="" vertex="1">
+          <mxGeometry height="145" width="1600" as="geometry" />
+        </mxCell>
+        <mxCell id="title" parent="1" style="text;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=40;fontStyle=1;fontColor=#FFFFFF;fillColor=none;strokeColor=none;strokeWidth=2;align=left;verticalAlign=top;spacing=0;" value="Manage project costs" vertex="1">
+          <mxGeometry height="56" width="1504" x="48" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="boundary" parent="1" style="rounded=0;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=22;fontStyle=0;fontColor=#18324B;fillColor=#F6F9FC;strokeColor=#16324B;strokeWidth=2;align=left;verticalAlign=top;spacing=16;" value="" vertex="1">
+          <mxGeometry height="625" width="1270" x="280" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="system" parent="1" style="text;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=23;fontStyle=1;fontColor=#16324B;fillColor=none;strokeColor=none;strokeWidth=2;align=left;verticalAlign=top;spacing=0;" value="Cost management" vertex="1">
+          <mxGeometry height="30" width="1200" x="304" y="209" as="geometry" />
+        </mxCell>
+        <mxCell id="sPfUhfMD8BT0r-4zlZz8-2" edge="1" parent="1" source="manager" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="costs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="manager" parent="1" style="shape=umlActor;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=20;fontStyle=0;fontColor=#18324B;fillColor=#FFFFFF;strokeColor=#16324B;strokeWidth=2;align=center;verticalAlign=middle;spacing=16;verticalLabelPosition=bottom;verticalAlign=top;spacingTop=10;" value="Authorized&#xa;manager / partner" vertex="1">
+          <mxGeometry height="105" width="70" x="60" y="452.5" as="geometry" />
+        </mxCell>
+        <mxCell id="costs" parent="1" style="ellipse;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=24;fontStyle=1;fontColor=#18324B;fillColor=#EAF2FB;strokeColor=#16324B;strokeWidth=2;align=center;verticalAlign=middle;spacing=16;" value="Manage project costs" vertex="1">
+          <mxGeometry height="120" width="340" x="450" y="445" as="geometry" />
+        </mxCell>
+        <mxCell id="access" parent="1" style="ellipse;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=23;fontStyle=0;fontColor=#18324B;fillColor=#E6F4F0;strokeColor=#16324B;strokeWidth=2;align=center;verticalAlign=middle;spacing=16;" value="Verify financial&#xa;access" vertex="1">
+          <mxGeometry height="100" width="400" x="1080" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="total" parent="1" style="ellipse;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=23;fontStyle=0;fontColor=#18324B;fillColor=#E6F4F0;strokeColor=#16324B;strokeWidth=2;align=center;verticalAlign=middle;spacing=16;" value="Calculate total&#xa;project cost" vertex="1">
+          <mxGeometry height="100" width="400" x="1080" y="625" as="geometry" />
+        </mxCell>
+        <mxCell id="expense" parent="1" style="ellipse;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=23;fontStyle=0;fontColor=#18324B;fillColor=#FFF4DB;strokeColor=#16324B;strokeWidth=2;align=center;verticalAlign=middle;spacing=16;" value="Record expense" vertex="1">
+          <mxGeometry height="100" width="360" x="440" y="255" as="geometry" />
+        </mxCell>
+        <mxCell id="refine" parent="1" style="ellipse;html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=23;fontStyle=0;fontColor=#18324B;fillColor=#FFF4DB;strokeColor=#16324B;strokeWidth=2;align=center;verticalAlign=middle;spacing=16;" value="Refine cost table&#xa;(search / filter / sort)" vertex="1">
+          <mxGeometry height="100" width="360" x="440" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="include-access" edge="1" parent="1" source="costs" style="edgeStyle=none;rounded=0;html=0;strokeColor=#16324B;strokeWidth=2;endArrow=open;endFill=0;dashed=1;exitX=0.9545588235294117;exitY=0.2916666666666667;entryX=0.0;entryY=0.5;exitPerimeter=0;entryPerimeter=0;" target="access">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="940" y="480" />
+              <mxPoint x="940" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="include-access-label" parent="1" style="text;html=0;align=center;verticalAlign=middle;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=none;fontFamily=Arial;fontSize=21;fontColor=#18324B;" value="«include»" vertex="1">
+          <mxGeometry height="31" width="111" x="884.5" y="382" as="geometry" />
+        </mxCell>
+        <mxCell id="include-total" edge="1" parent="1" source="costs" style="edgeStyle=none;rounded=0;html=0;strokeColor=#16324B;strokeWidth=2;endArrow=open;endFill=0;dashed=1;exitX=0.9545588235294117;exitY=0.7083333333333334;entryX=0.0;entryY=0.5;exitPerimeter=0;entryPerimeter=0;" target="total">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="940" y="530" />
+              <mxPoint x="940" y="675" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="include-total-label" parent="1" style="text;html=0;align=center;verticalAlign=middle;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=none;fontFamily=Arial;fontSize=21;fontColor=#18324B;" value="«include»" vertex="1">
+          <mxGeometry height="31" width="111" x="884.5" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="extend-expense" edge="1" parent="1" source="expense" style="edgeStyle=none;rounded=0;html=0;strokeColor=#16324B;strokeWidth=2;endArrow=open;endFill=0;dashed=1;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;exitPerimeter=0;entryPerimeter=0;" target="costs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="extend-expense-label" parent="1" style="text;html=0;align=center;verticalAlign=middle;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=none;fontFamily=Arial;fontSize=21;fontColor=#18324B;" value="«extend»" vertex="1">
+          <mxGeometry height="31" width="107" x="566.5" y="384" as="geometry" />
+        </mxCell>
+        <mxCell id="extend-refine" edge="1" parent="1" source="refine" style="edgeStyle=none;rounded=0;html=0;strokeColor=#16324B;strokeWidth=2;endArrow=open;endFill=0;dashed=1;exitX=0.5;exitY=0.0;entryX=0.5;entryY=1.0;exitPerimeter=0;entryPerimeter=0;" target="costs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="extend-refine-label" parent="1" style="text;html=0;align=center;verticalAlign=middle;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=none;fontFamily=Arial;fontSize=21;fontColor=#18324B;" value="«extend»" vertex="1">
+          <mxGeometry height="31" width="107" x="566.5" y="591" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
