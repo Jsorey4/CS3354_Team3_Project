@@ -1,0 +1,229 @@
+/*
+ * @author Tyler Gaines (themes & accessibility)
+ * @description Global styles matching the ProjectForge Design System from the HTML mockups. Dark is the
+ *   reference theme (Midnight background, navy cards, periwinkle buttons, purple accents, gold wordmark);
+ *   light is its daylight counterpart. The color-blindness palettes (protanopia, deuteranopia, tritanopia,
+ *   high contrast) override the status colors. Only standard CSS (custom properties, Flexbox, Grid) is used
+ *   so every screen renders the same in Chrome, Edge, Firefox and Safari.
+ * @traces SE-FR-14, SE-FR-15, SE-NFR-05
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Light theme ---------- */
+:root {
+  --c-canvas: 244 246 252;
+  --c-surface: 255 255 255;
+  --c-surface-2: 236 239 248;
+  --c-field: 248 249 253;
+  --c-line: 221 226 240;
+  --c-line-strong: 197 204 225;
+  --c-ink: 17 22 45;
+  --c-body: 63 72 104;
+  --c-muted: 104 113 145;
+  --c-nav: 84 94 128;
+  --c-brand: 79 99 230;
+  --c-brand-ink: 255 255 255;
+  --c-accent: 124 92 224;
+  --c-accent-tint: 91 63 196;
+  --c-accent-deep: 236 231 253;
+  --c-gold: 176 112 14;
+  --c-ok: 13 148 103;
+  --c-warn: 176 112 14;
+  --c-danger: 214 51 132;
+  --c-info: 30 120 190;
+  color-scheme: light;
+}
+
+/* ---------- Dark theme: the mockups' design system ---------- */
+.dark {
+  --c-canvas: 15 20 36;        /* Midnight #0F1424 */
+  --c-surface: 28 35 64;       /* Card #1C2340 */
+  --c-surface-2: 21 27 48;     /* Sidebar / alt #151B30 */
+  --c-field: 15 20 36;         /* Inputs #0F1424 */
+  --c-line: 42 51 88;          /* Border #2A3358 */
+  --c-line-strong: 58 69 112;  /* Secondary border #3A4570 */
+  --c-ink: 241 244 255;        /* Ink #F1F4FF */
+  --c-body: 180 189 217;       /* Body #B4BDD9 */
+  --c-muted: 135 145 179;      /* Muted #8791B3 */
+  --c-nav: 154 165 200;        /* Nav #9AA5C8 */
+  --c-brand: 143 168 255;      /* Primary button #8FA8FF */
+  --c-brand-ink: 15 20 36;
+  --c-accent: 167 139 250;     /* Purple #A78BFA */
+  --c-accent-tint: 196 181 253;/* Tint #C4B5FD */
+  --c-accent-deep: 42 35 82;   /* Deep #2A2352 */
+  --c-gold: 245 185 66;        /* Brand gold #F5B942 */
+  --c-ok: 52 211 153;          /* Success #34D399 */
+  --c-warn: 245 185 66;        /* Warning #F5B942 */
+  --c-danger: 244 114 182;     /* Pink #F472B6 */
+  --c-info: 125 196 245;       /* Info #7DC4F5 */
+  color-scheme: dark;
+}
+
+/* Red-green safe (Okabe-Ito): success = blue, danger = vermillion, warning = yellow-orange. */
+[data-cb='protanopia'],
+[data-cb='deuteranopia'] {
+  --c-ok: 0 114 178;
+  --c-warn: 200 130 0;
+  --c-danger: 213 94 0;
+  --c-info: 60 150 210;
+}
+.dark[data-cb='protanopia'],
+.dark[data-cb='deuteranopia'] {
+  --c-ok: 86 180 233;
+  --c-warn: 240 228 66;
+  --c-danger: 230 120 50;
+  --c-info: 150 205 245;
+}
+
+/* Blue-yellow safe: success = teal, warning = magenta, danger = crimson. */
+[data-cb='tritanopia'] {
+  --c-ok: 0 150 136;
+  --c-warn: 204 51 153;
+  --c-danger: 200 0 40;
+  --c-info: 60 90 150;
+}
+.dark[data-cb='tritanopia'] {
+  --c-ok: 80 210 190;
+  --c-warn: 240 110 190;
+  --c-danger: 255 90 110;
+  --c-info: 150 170 230;
+}
+
+[data-cb='high_contrast'] {
+  --c-line: 120 128 150;
+  --c-line-strong: 90 96 110;
+  --c-muted: 50 55 66;
+  --c-body: 20 24 34;
+  --c-ink: 0 0 0;
+}
+.dark[data-cb='high_contrast'] {
+  --c-line: 120 132 170;
+  --c-line-strong: 170 176 200;
+  --c-muted: 215 220 235;
+  --c-body: 235 238 248;
+  --c-ink: 255 255 255;
+  --c-surface: 10 12 24;
+  --c-canvas: 0 0 0;
+}
+[data-cb='high_contrast'] :focus-visible {
+  outline: 3px solid rgb(var(--c-brand));
+  outline-offset: 2px;
+}
+
+@layer base {
+  html {
+    font-family: Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-canvas text-[16px] leading-normal text-body;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-ink;
+  }
+  /* Keyboard focus: every interactive element gets a 2px outline in the theme's primary colour (visible
+     on the dark, light and colour-blind palettes; the high-contrast palette thickens it to 3px above).
+     Form fields show the same colour as a border plus ring, see .input. */
+  :focus-visible {
+    outline: 2px solid rgb(var(--c-brand) / 0.9);
+    outline-offset: 2px;
+  }
+  input,
+  select,
+  textarea {
+    @apply text-ink;
+  }
+  input[type='checkbox'],
+  input[type='radio'] {
+    accent-color: rgb(var(--c-accent));
+  }
+}
+
+@layer components {
+  /* .card from the mockups: #1C2340, 1px #2A3358 border, 16px radius */
+  .card {
+    @apply rounded-card border border-line bg-surface;
+  }
+  .card-title {
+    @apply text-base font-bold leading-6 text-ink;
+  }
+  .card-meta {
+    @apply text-[13px] leading-5 text-muted;
+  }
+  .page-title {
+    @apply text-[32px] font-extrabold leading-10 tracking-[-0.02em] text-ink;
+  }
+  .page-sub {
+    @apply mt-1 text-[15px] leading-[22px] text-body;
+  }
+  .input {
+    @apply w-full rounded-btn border border-line-strong bg-field px-3.5 py-2.5 text-[15px] leading-[22px] text-ink placeholder:text-muted focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/45 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .label {
+    @apply mb-2 block text-[13px] font-semibold leading-[18px] text-ink;
+  }
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-[0.08em] text-muted;
+  }
+  /* .btn from the mockups: 44px tall, 10px radius, 15px semibold */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-btn border border-transparent px-5 py-2.5 text-[15px] font-semibold leading-[22px] transition disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply btn bg-brand text-brand-ink hover:brightness-105;
+  }
+  .btn-secondary {
+    @apply btn border-line-strong bg-surface text-ink hover:bg-surface-2;
+  }
+  .btn-ghost {
+    @apply btn text-nav hover:bg-surface-2 hover:text-ink;
+  }
+  .btn-danger {
+    @apply btn border-line-strong bg-surface text-danger hover:bg-danger/10;
+  }
+  /* Declared after the variants so its size wins (mockup .btn-sm: 36px tall, 14px text). */
+  .btn-sm {
+    @apply px-3.5 py-1.5 text-sm;
+  }
+  .table-head {
+    @apply border-b border-line-strong px-3 py-3 text-left text-xs font-bold uppercase tracking-[0.06em] text-muted;
+  }
+  .table-cell {
+    @apply px-3 py-3.5 text-[15px] text-body;
+  }
+  .pill {
+    @apply inline-flex items-center gap-1 whitespace-nowrap rounded-full px-3 py-1 text-xs font-semibold leading-4;
+  }
+}
+
+.markdown p {
+  margin: 0.25rem 0;
+}
+.markdown ul,
+.markdown ol {
+  margin: 0.25rem 0 0.25rem 1.25rem;
+}
+.markdown ul {
+  list-style: disc;
+}
+.markdown ol {
+  list-style: decimal;
+}
+.markdown strong {
+  @apply font-bold text-ink;
+}
+.markdown code {
+  @apply rounded bg-surface-2 px-1 py-0.5 font-mono text-[0.85em] text-ink;
+}
+.markdown pre {
+  @apply my-2 overflow-x-auto rounded-lg bg-surface-2 p-3 font-mono text-xs;
+}
+.markdown blockquote {
+  @apply my-1 border-l-4 border-line-strong pl-3 text-muted;
+}
