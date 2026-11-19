@@ -1,0 +1,82 @@
+.pg-calendar { width: 1440px;
+  min-height: 900px;
+  background: #0F1424;
+  color: #B4BDD9;
+  font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5; }
+.pg-calendar a { text-decoration: none; color: inherit; }
+.pg-calendar svg { display: block; flex-shrink: 0; }
+.pg-calendar .app { display: flex; width: 1440px; min-height: 900px; }
+.pg-calendar .sidebar { width: 240px; min-height: 900px; flex-shrink: 0;
+  display: flex; flex-direction: column;
+  padding: 24px 16px;
+  background: #151B30; border-right: 1px solid #2A3358; }
+.pg-calendar .sb-brand { display: flex; align-items: center; gap: 12px; padding: 0 8px; height: 40px; }
+.pg-calendar .sb-logo { display: block; width: auto; height: 40px; margin: 0 5.5px; }
+.pg-calendar .sb-name { font-size: 20px; font-weight: 700; color: #F5B942; letter-spacing: -0.02em; }
+.pg-calendar .sb-nav { display: flex; flex-direction: column; gap: 4px; margin-top: 32px; }
+.pg-calendar .nav-item { display: flex; align-items: center; gap: 12px;
+  height: 44px; padding: 0 12px; border-radius: 10px;
+  font-size: 15px; font-weight: 500; color: #9AA5C8; }
+.pg-calendar .nav-item.active { background: #2A2352; color: #C4B5FD; font-weight: 600; }
+.pg-calendar .sb-bottom { margin-top: auto; padding-top: 16px; border-top: 1px solid #2A3358;
+  display: flex; flex-direction: column; gap: 4px; }
+.pg-calendar .sb-user { display: flex; align-items: center; gap: 12px; height: 52px; padding: 0 12px; border-radius: 10px; }
+.pg-calendar .avatar { width: 32px; height: 32px; border-radius: 50%; background: #2A2352; color: #C4B5FD;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700; }
+.pg-calendar .sb-user-name { font-size: 15px; font-weight: 600; color: #F1F4FF; line-height: 20px; }
+.pg-calendar .sb-user-role { font-size: 12px; color: #8791B3; line-height: 16px; }
+.pg-calendar .main { width: 1200px; padding: 40px 48px 48px; }
+.pg-calendar .page-head { display: flex; align-items: flex-start; justify-content: space-between; }
+.pg-calendar .page-title { font-size: 32px; line-height: 40px; font-weight: 800; color: #F1F4FF; letter-spacing: -0.02em; }
+.pg-calendar .page-sub { margin-top: 4px; font-size: 15px; line-height: 22px; color: #B4BDD9; }
+.pg-calendar .page-sub b { font-weight: 600; color: #F1F4FF; }
+.pg-calendar .card { background: #1C2340; border: 1px solid #2A3358; border-radius: 16px; padding: 24px; }
+.pg-calendar .card-title { font-size: 16px; line-height: 24px; font-weight: 700; color: #F1F4FF; }
+.pg-calendar .progress { height: 8px; border-radius: 999px; background: #2A3358; }
+.pg-calendar .progress-fill { height: 8px; border-radius: 999px; background: #8FA8FF; }
+.pg-calendar .pill { padding: 4px 12px; border-radius: 999px; font-size: 12px; line-height: 16px; font-weight: 600; }
+.pg-calendar .page-actions { display: flex; gap: 12px; }
+.pg-calendar .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  height: 44px; padding: 0 20px; border-radius: 10px;
+  font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer;
+  border: 1px solid transparent; }
+.pg-calendar .btn-primary { background: #8FA8FF; color: #0F1424; }
+.pg-calendar .btn-secondary { background: #1C2340; color: #F1F4FF; border-color: #3A4570; }
+.pg-calendar .btn-sm { height: 36px; padding: 0 14px; font-size: 14px; }
+.pg-calendar .btn-block { width: 100%; }
+.pg-calendar .av { width: 22px; height: 22px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 9px; font-weight: 700; }
+.pg-calendar .av-p { background: #2A2352; color: #C4B5FD; }
+.pg-calendar .av-i { background: #14304A; color: #7DC4F5; }
+.pg-calendar .av-w { background: #3A2E12; color: #F5B942; }
+.pg-calendar .av-s { background: #123A2E; color: #34D399; }
+.pg-calendar .box { width: 20px; height: 20px; border-radius: 6px; border: 1.5px solid #4A557F;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.pg-calendar .box.on { background: #A78BFA; border-color: #A78BFA; }
+.pg-calendar .seg { display: inline-flex; gap: 4px; padding: 4px; background: #1C2340; border: 1px solid #2A3358; border-radius: 12px; }
+.pg-calendar .seg-item { height: 32px; padding: 0 16px; border-radius: 8px; display: flex; align-items: center;
+  font-size: 14px; font-weight: 500; color: #9AA5C8; }
+.pg-calendar .seg-item.active { background: #2A2352; color: #C4B5FD; font-weight: 600; }
+.pg-calendar .toolbar { margin-top: 20px; display: flex; align-items: center; justify-content: space-between; }
+.pg-calendar .tb-actions { display: flex; gap: 10px; }
+.pg-calendar .cal { margin-top: 20px; background: #1C2340; border: 1px solid #2A3358; border-radius: 16px; overflow: hidden; }
+.pg-calendar .chip { margin-top: 6px; padding: 3px 8px; border-radius: 6px; border-left: 3px solid;
+  font-size: 12px; line-height: 16px; font-weight: 600; white-space: nowrap; overflow: hidden; }
+.pg-calendar .chip-p { background: #2A2352; color: #C4B5FD; border-color: #A78BFA; }
+.pg-calendar .chip-i { background: #26305A; color: #8FA8FF; border-color: #8FA8FF; }
+.pg-calendar .chip-g { background: #3A2E12; color: #F5B942; border-color: #F5B942; }
+.pg-calendar .dn { width: 24px; height: 24px; line-height: 24px; text-align: center; font-size: 13px; font-weight: 600; color: #B4BDD9; }
+.pg-calendar .dn.today { background: #A78BFA; color: #0F1424; border-radius: 50%; font-weight: 700; }
+.pg-calendar .cal-head { display: flex; height: 40px; background: #151B30; border-bottom: 1px solid #2A3358; }
+.pg-calendar .cal-hd { flex: 1; display: flex; align-items: center; justify-content: center; border-right: 1px solid #2A3358;
+  font-size: 12px; font-weight: 700; color: #8791B3; text-transform: uppercase; letter-spacing: 0.06em; }
+.pg-calendar .cal-hd:last-child { border-right: none; }
+.pg-calendar .cal-row { display: flex; height: 118px; border-bottom: 1px solid #2A3358; }
+.pg-calendar .cal-row:last-child { border-bottom: none; }
+.pg-calendar .cal-cell { flex: 1; min-width: 0; padding: 8px; border-right: 1px solid #2A3358; }
+.pg-calendar .cal-cell:last-child { border-right: none; }
+.pg-calendar .cal-cell.out { background: #151B30; }

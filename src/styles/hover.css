@@ -1,0 +1,108 @@
+/* ===== Hover & interaction polish =====
+   Subtle lift / glow on everything you can click. Loaded last.
+*/
+
+/* Buttons */
+.btn { transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, color 0.15s ease, filter 0.15s ease; }
+.btn:not(:disabled):hover { transform: translateY(-1px); }
+.btn:not(:disabled):active { transform: translateY(0); filter: brightness(0.95); }
+.btn-primary:not(:disabled):hover { background: #A9BCFF; box-shadow: 0 6px 18px rgba(143, 168, 255, 0.28); }
+.btn-secondary:not(:disabled):hover { background: #252E52; border-color: #55639A; box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25); }
+.btn-ghost:not(:disabled):hover { background: #1C2340; }
+.btn-outline-white:not(:disabled):hover { background: rgba(255, 255, 255, 0.08); border-color: #C4B5FD; }
+.btn-danger:not(:disabled):hover { background: #F78FC6; box-shadow: 0 6px 18px rgba(244, 114, 182, 0.3); }
+.btn-danger-ghost:not(:disabled):hover { background: #3E1E3A; }
+.btn-logout:not(:disabled):hover, .btn-danger-outline:not(:disabled):hover { border-color: #F472B6; background: #2E1C34; }
+.btn-conn:not(:disabled):hover { background: #164636; border-color: #34D399; }
+.pg-profile .btn-conn:not(:disabled):hover { background: #3E1E3A; border-color: #F472B6; color: #F472B6; }
+.pg-profile .btn-conn:hover .conn-on { display: none; }
+.pg-profile .btn-conn:hover .conn-off { display: inline; }
+.link-btn { transition: color 0.15s; }
+.link-btn:hover { color: #C4B5FD; text-decoration: underline; text-underline-offset: 3px; }
+
+/* Sidebar */
+.nav-item, .sb-user { transition: background-color 0.15s ease, color 0.15s ease; }
+.nav-item svg { transition: color 0.15s ease, transform 0.15s ease; }
+.nav-item:not(.active):hover { background: #1C2340; color: #F1F4FF; }
+.nav-item:not(.active):hover svg { color: #C4B5FD; transform: translateX(1px); }
+.nav-item.active:hover { background: #312A60; }
+.sb-user:hover { background: #1C2340; }
+.sb-brand .sb-logo { transition: transform 0.25s ease; }
+.sb-brand:hover .sb-logo { transform: rotate(-12deg); }
+
+/* Segmented controls & filters */
+.filter, .seg-item { transition: background-color 0.15s ease, color 0.15s ease; }
+.filter:not(.active):hover, .seg-item:not(.active):hover { background: #232B4D; color: #F1F4FF; }
+
+/* Cards that navigate / select */
+.card.is-clickable, .feature, .mock { transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease; }
+.card.is-clickable:hover { transform: translateY(-2px); border-color: #4A5788; box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3); }
+.card.is-clickable.selected:hover { border-color: #C4B5FD; }
+.ccard { transition: border-color 0.18s ease; }
+.ccard:hover { border-color: #3A4570; }
+
+/* Rows inside cards */
+.dl-row, .r-row, .n-row, .t-row, .pr-item, .ts-row, .eh-block, .ck-row { transition: background-color 0.15s ease; }
+.pg-dashboard .dl-row { margin: 0 -12px; padding: 0 12px; border-radius: 10px; }
+.pg-dashboard .dl-row:hover, .r-row:hover, .n-row:hover, .t-row.is-clickable:hover, .ck-row:hover { background: rgba(143, 168, 255, 0.07); }
+.pg-dashboard .pr-item { margin: -6px -10px; padding: 6px 10px; border-radius: 10px; }
+.pg-dashboard .pr-item:hover, .ts-row.is-clickable:hover, .eh-block.is-clickable:hover { background: rgba(143, 168, 255, 0.07); }
+.ts-row.is-clickable, .eh-block.is-clickable { margin: -8px -10px; padding: 8px 10px; border-radius: 10px; }
+.dl-row:hover .dl-name, .pr-item:hover .pr-name { color: #C4B5FD; }
+.progress-fill { transition: width 0.4s ease, filter 0.15s; }
+.dl-row:hover .dl-dot { transform: scale(1.25); }
+.dl-dot { transition: transform 0.15s; }
+
+/* Task cards */
+.task { transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease; }
+.pf .task:hover { transform: translateY(-2px); border-color: #4A5788; background: #202848; box-shadow: 0 8px 18px rgba(0, 0, 0, 0.28); }
+.pf .task.selected:hover { border-color: #C4B5FD; }
+.col-add:hover { opacity: 1; border-color: #A78BFA; color: #C4B5FD; background: rgba(167, 139, 250, 0.06); }
+
+/* Avatars */
+.avatars .av { transition: transform 0.15s ease; position: relative; }
+.avatars .av:hover { transform: translateY(-3px); z-index: 2; }
+
+/* Calendar */
+.cal-cell.is-clickable { transition: background-color 0.15s ease; }
+.cal-cell.is-clickable:hover { background: #202848; }
+.pg-calendar .dn:not(.today):hover { background: #2A3358; color: #F1F4FF; }
+.chip:hover { filter: brightness(1.25); transform: translateX(2px); }
+.ev:hover { filter: brightness(1.2); box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35); z-index: 2; }
+.wk-hd { transition: background-color 0.15s; }
+.cal:not(.day-view) .wk-hd:hover { background: #1C2340; }
+.wk-col { transition: background-color 0.15s; }
+.wk-col:hover { background-color: rgba(143, 168, 255, 0.035); }
+.more-link:hover { color: #C4B5FD; }
+
+/* Checkboxes & toggles */
+.ck:hover .box, .ck-row:hover .box, .pf-ck:hover .box { border-color: #A78BFA; }
+.toggle { cursor: pointer; transition: background-color 0.2s ease, box-shadow 0.15s ease; }
+.toggle .knob { transition: left 0.2s ease, background-color 0.2s ease; }
+.toggle:hover { box-shadow: 0 0 0 4px rgba(167, 139, 250, 0.15); }
+
+/* Time tracking */
+.r-row:hover .r-del { opacity: 1; width: 28px; margin-left: 8px; }
+.r-del:hover { background: #3E1E3A; color: #F472B6; }
+.select:hover { border-color: #4A5788; }
+.select-opt:hover { background: #2A3358; }
+
+/* Notifications */
+.n-row:hover .n-del { opacity: 1; }
+.n-del:hover { background: #2A3358; color: #F1F4FF; }
+.n-dot:hover { transform: scale(1.35); }
+
+/* Auth & landing links */
+.forgot a, .signup a, .alt a { transition: color 0.15s; }
+.forgot a:hover, .signup a:hover, .alt a:hover { color: #C4B5FD; text-decoration: underline; text-underline-offset: 3px; }
+.pg-signup .input:hover, .pg-reset-password .input:hover, .pg-login .input:hover { border-color: #4A5788; }
+.pg-landing .nav a, .footer-links a { transition: color 0.15s; }
+.pg-landing .nav a:hover, .footer-links a:hover { color: #F1F4FF; }
+.pg-landing .logo .logo-img { transition: transform 0.25s ease; }
+.pg-landing .logo:hover .logo-img { transform: rotate(-12deg); }
+.feature:hover { transform: translateY(-4px); border-color: #4B3F96; box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35); }
+.feature .f-icon { transition: transform 0.2s ease; }
+.feature:hover .f-icon { transform: scale(1.08) rotate(-4deg); }
+.mock:hover { transform: translateY(-4px); box-shadow: 0 32px 64px rgba(0, 0, 0, 0.45); border-color: #3A4570; }
+.pg-landing .bar { transition: filter 0.15s; }
+.pg-landing .bar:hover { filter: brightness(1.3); }

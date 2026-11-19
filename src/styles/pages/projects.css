@@ -1,0 +1,87 @@
+.pg-projects { width: 1440px;
+  min-height: 900px;
+  background: #0F1424;
+  color: #B4BDD9;
+  font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5; }
+.pg-projects a { text-decoration: none; color: inherit; }
+.pg-projects svg { display: block; flex-shrink: 0; }
+.pg-projects .app { display: flex; width: 1440px; min-height: 900px; }
+.pg-projects .sidebar { width: 240px; min-height: 900px; flex-shrink: 0;
+  display: flex; flex-direction: column;
+  padding: 24px 16px;
+  background: #151B30; border-right: 1px solid #2A3358; }
+.pg-projects .sb-brand { display: flex; align-items: center; gap: 12px; padding: 0 8px; height: 40px; }
+.pg-projects .sb-logo { display: block; width: auto; height: 40px; margin: 0 5.5px; }
+.pg-projects .sb-name { font-size: 20px; font-weight: 700; color: #F5B942; letter-spacing: -0.02em; }
+.pg-projects .sb-nav { display: flex; flex-direction: column; gap: 4px; margin-top: 32px; }
+.pg-projects .nav-item { display: flex; align-items: center; gap: 12px;
+  height: 44px; padding: 0 12px; border-radius: 10px;
+  font-size: 15px; font-weight: 500; color: #9AA5C8; }
+.pg-projects .nav-item.active { background: #2A2352; color: #C4B5FD; font-weight: 600; }
+.pg-projects .sb-bottom { margin-top: auto; padding-top: 16px; border-top: 1px solid #2A3358;
+  display: flex; flex-direction: column; gap: 4px; }
+.pg-projects .sb-user { display: flex; align-items: center; gap: 12px; height: 52px; padding: 0 12px; border-radius: 10px; }
+.pg-projects .avatar { width: 32px; height: 32px; border-radius: 50%; background: #2A2352; color: #C4B5FD;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700; }
+.pg-projects .sb-user-name { font-size: 15px; font-weight: 600; color: #F1F4FF; line-height: 20px; }
+.pg-projects .sb-user-role { font-size: 12px; color: #8791B3; line-height: 16px; }
+.pg-projects .main { width: 1200px; padding: 40px 48px 48px; }
+.pg-projects .page-head { display: flex; align-items: flex-start; justify-content: space-between; }
+.pg-projects .page-title { font-size: 32px; line-height: 40px; font-weight: 800; color: #F1F4FF; letter-spacing: -0.02em; }
+.pg-projects .page-sub { margin-top: 4px; font-size: 15px; line-height: 22px; color: #B4BDD9; }
+.pg-projects .page-sub b { font-weight: 600; color: #F1F4FF; }
+.pg-projects .card { background: #1C2340; border: 1px solid #2A3358; border-radius: 16px; padding: 24px; }
+.pg-projects .card-title { font-size: 16px; line-height: 24px; font-weight: 700; color: #F1F4FF; }
+.pg-projects .progress { height: 8px; border-radius: 999px; background: #2A3358; }
+.pg-projects .progress-fill { height: 8px; border-radius: 999px; background: #8FA8FF; }
+.pg-projects .pill { padding: 4px 12px; border-radius: 999px; font-size: 12px; line-height: 16px; font-weight: 600; }
+.pg-projects .filters { margin-top: 16px; display: inline-flex; gap: 4px; padding: 4px;
+  background: #1C2340; border: 1px solid #2A3358; border-radius: 12px; }
+.pg-projects .filter { height: 32px; padding: 0 16px; border-radius: 8px;
+  display: flex; align-items: center;
+  font-size: 14px; font-weight: 500; color: #9AA5C8; }
+.pg-projects .filter.active { background: #2A2352; color: #C4B5FD; font-weight: 600; }
+.pg-projects .avatars { display: flex; align-items: center; }
+.pg-projects .av { width: 28px; height: 28px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 700;
+  border: 2px solid #1C2340; margin-left: -8px; }
+.pg-projects .avatars .av:first-child { margin-left: 0; }
+.pg-projects .av-p { background: #2A2352; color: #C4B5FD; }
+.pg-projects .av-i { background: #14304A; color: #7DC4F5; }
+.pg-projects .av-w { background: #3A2E12; color: #F5B942; }
+.pg-projects .av-s { background: #123A2E; color: #34D399; }
+.pg-projects .proj-row { display: flex; gap: 24px; margin-top: 24px; }
+.pg-projects .proj-card { width: 540px; padding: 20px 24px 24px; }
+.pg-projects .proj-card.selected { border-color: #A78BFA; }
+.pg-projects .pc-top { display: flex; align-items: center; justify-content: space-between; }
+.pg-projects .pc-name { font-size: 18px; line-height: 26px; font-weight: 700; color: #F1F4FF; }
+.pg-projects .pc-mid { margin-top: 12px; }
+.pg-projects .pc-meta { margin-top: 12px; display: flex; align-items: center; justify-content: space-between; font-size: 14px; line-height: 20px; }
+.pg-projects .pc-due { color: #B4BDD9; }
+.pg-projects .pc-pct { font-weight: 700; color: #F1F4FF; }
+.pg-projects .proj-card .progress { margin-top: 10px; }
+.pg-projects .detail { margin-top: 24px; padding: 24px; }
+.pg-projects .detail-head { display: flex; align-items: center; justify-content: space-between; }
+.pg-projects .detail-left { display: flex; align-items: center; gap: 12px; }
+.pg-projects .detail-title { font-size: 22px; line-height: 30px; font-weight: 800; color: #F1F4FF; letter-spacing: -0.01em; }
+.pg-projects .detail .av { border-color: #1C2340; }
+.pg-projects .board { margin-top: 16px; display: flex; gap: 20px; padding: 16px 20px 20px;
+  background: #151B30; border: 1px solid #2A3358; border-radius: 12px; }
+.pg-projects .col { flex: 1; min-width: 0; }
+.pg-projects .col-head { display: flex; align-items: center; justify-content: space-between; height: 28px; }
+.pg-projects .col-label { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; color: #F1F4FF; }
+.pg-projects .col-dot { width: 8px; height: 8px; border-radius: 50%; }
+.pg-projects .col-count { min-width: 24px; height: 22px; padding: 0 8px; border-radius: 999px;
+  display: flex; align-items: center; justify-content: center;
+  background: #2A3358; color: #B4BDD9; font-size: 12px; font-weight: 600; }
+.pg-projects .col-list { margin-top: 8px; display: flex; flex-direction: column; gap: 8px; }
+.pg-projects .task { background: #1C2340; border: 1px solid #2A3358; border-radius: 10px; padding: 10px 14px; }
+.pg-projects .task-title { font-size: 14px; line-height: 20px; font-weight: 600; color: #F1F4FF; }
+.pg-projects .task-meta { margin-top: 6px; display: flex; align-items: center; justify-content: space-between; }
+.pg-projects .task-due { font-size: 12px; line-height: 16px; color: #8791B3; }
+.pg-projects .task .av { width: 22px; height: 22px; font-size: 9px; margin-left: 0; border: none; }
+.pg-projects .task-done .task-title { display: flex; align-items: center; gap: 8px; color: #B4BDD9; }

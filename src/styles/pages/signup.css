@@ -1,0 +1,48 @@
+.pg-signup { width: 1440px;
+  min-height: 900px;
+  background: #0F1424;
+  color: #B4BDD9;
+  font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5; }
+.pg-signup a { text-decoration: none; color: inherit; }
+.pg-signup svg { display: block; }
+.pg-signup .page { width: 1440px;
+  min-height: 900px;
+  padding: 64px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #0F1424; }
+.pg-signup .brand { display: flex; flex-direction: column; align-items: center; }
+.pg-signup .brand-logo { display: block; width: auto; height: 64px; }
+.pg-signup .brand-name { margin-top: 16px; font-size: 28px; line-height: 36px; font-weight: 700;
+  color: #F5B942; letter-spacing: -0.02em; }
+.pg-signup .card { width: 440px;
+  margin-top: 32px;
+  padding: 40px;
+  background: #1C2340;
+  border: 1px solid #2A3358;
+  border-radius: 16px;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35); }
+.pg-signup .card-title { text-align: center; font-size: 28px; line-height: 36px; font-weight: 800;
+  color: #F1F4FF; letter-spacing: -0.02em; }
+.pg-signup .card-sub { margin-top: 8px; text-align: center; font-size: 15px; line-height: 22px; color: #B4BDD9; }
+.pg-signup .form { margin-top: 32px; display: flex; flex-direction: column; gap: 20px; }
+.pg-signup .field { display: flex; flex-direction: column; gap: 8px; }
+.pg-signup .label { font-size: 14px; line-height: 20px; font-weight: 600; color: #F1F4FF; }
+.pg-signup .input { width: 100%; height: 48px; padding: 0 16px;
+  background: #0F1424; border: 1px solid #3A4570; border-radius: 10px;
+  font-family: inherit; font-size: 15px; line-height: 22px; color: #F1F4FF;
+  outline: none; }
+.pg-signup .input::placeholder { color: #8791B3; opacity: 1; }
+.pg-signup .input:focus { border-color: #8FA8FF; }
+.pg-signup .btn { display: flex; align-items: center; justify-content: center;
+  width: 100%; height: 52px; border-radius: 12px;
+  font-family: inherit; font-size: 16px; font-weight: 600; cursor: pointer;
+  border: 1px solid transparent; }
+.pg-signup .btn-primary { background: #8FA8FF; color: #0F1424; }
+.pg-signup .form .btn { margin-top: 4px; }
+.pg-signup .alt { margin-top: 24px; text-align: center; font-size: 15px; line-height: 22px; color: #B4BDD9; }
+.pg-signup .alt a { font-weight: 600; color: #A78BFA; }

@@ -1,58 +1,84 @@
-# ProjectForge
+# ProjectForge — Frontend
 
-**Class:** CS 3354.001 – Software Engineering - Fall 2026
+React 19 + Vite single-page app built from the 15 ProjectForge screen designs. Deploys to Vercel with zero config.
 
-**Professor:** Srimathi Srinivasan
+## Run it
 
-## Team Details
+```bash
+npm install
+npm run dev        # http://localhost:5173
+npm run build      # production build → dist/
+npm run preview    # serve the build locally
+```
 
-**Team #:** 3  
-**Team Name:** eLeet Coderz
+Log in with **any email and a password of 6+ characters** (auth is mocked until the API is connected — see below).
 
-### Team Members
+## Deploy (Vercel)
 
-- Jon Sorey
-- Tyler Gaines
-- Saaqib Shaik
-- Preethi Seereddy
-- Myoram Langwang
-- Aashwat Singh
+Push this folder to the frontend branch. Vercel detects Vite automatically; `vercel.json` sets the build output to `dist/` and rewrites all routes to `index.html` so deep links such as `/tasks?task=t5` work on refresh.
 
-## Statement of Work
+If the repo root is not this folder (e.g. a monorepo with `/frontend`), set **Root Directory** in Vercel → Project → Settings.
 
-Project Forge is a software application designed to enable the user to organize and manage their projects in one platform. The software helps the user to track their tasks, deadlines, the members of their team, and progress within the project and contains all information concerning the project.
+## Routes
 
-Our objective is to simplify the process of project management by giving the user tools to organize themselves, prioritize tasks, and work together with other people.
+| Path | Screen |
+|---|---|
+| `/` | Landing |
+| `/login`, `/signup`, `/reset-password` | Auth |
+| `/dashboard` | Home |
+| `/projects` | Projects + Kanban board |
+| `/tasks` | Tasks board + details panel |
+| `/charts` | Progress, time & estimate charts |
+| `/cost` | Budgets & cost breakdown |
+| `/people` | Team members |
+| `/calendar` (`?view=month|week|day`) | Calendar (month & week designs) |
+| `/time-tracking` | Timer, records, export |
+| `/notifications` | Notifications |
+| `/profile` | Profile & settings |
 
-Project Forge includes the interests of our team in frontend/UI, backend programming, data analysis, cybersecurity, AI integration and APIs. This project enables everyone in the team to utilize their strengths while learning new technologies.
+App routes require login. Old `*.html` links (e.g. `/dashboard.html`) redirect to the new routes.
 
-## Features
+## What works
 
-### 1. Calendar Integration
-- Import project tasks and deadlines into a calendar.
-- Help users keep track of upcoming deadlines.
+- **Auth**: login / signup validation, reset-password confirmation, logout, protected routes
+- **Tasks**: create, edit, delete, mark done/reopen, change status from the details panel, **drag & drop between columns** (Tasks and Projects boards)
+- **Projects**: category filters, create/edit/delete projects (colour, budget, members, due date), per-column "Add task"
+- **Dashboard**: live numbers from your data, Customize dialog (show/hide cards), every card links through
+- **Calendar**: month / week / day views, prev/next/today, add/edit/delete events (click a day or time slot), task & project deadlines shown automatically, overlapping events side by side, **Export iCal** (.ics)
+- **Time tracking**: live timer with start / pause / resume / stop / discard, manual entries, delete records, **real Excel (.xlsx) export** with selectable sheets, Google Sheets export (CSV + opens a new sheet)
+- **Cost**: budgets vs actual spend (actual hours come from the time tracker), add/edit stages and rates, .xlsx export
+- **People**: add/remove members, per-person task list
+- **Notifications**: open (jumps to the task), mark read/unread, mark all read, dismiss, unread badge in the sidebar
+- **Profile**: edit name/email (updates the sidebar), change password dialog, notification toggles, connection toggles, dashboard preferences, reset demo data
+- Hover states on every interactive element (buttons, nav, cards, rows, chips, toggles…)
 
-### 2. Soft Deadlines
-- Allow users to set flexible deadlines for tasks.
-- Help users plan their work before final due dates.
+## Data & connecting the Node API
 
-### 3. Task Management
-- Create, edit, and organize tasks.
-- Assign tasks to team members.
-- Set task priorities based on importance.
+All data lives in React context (`src/lib/store.jsx`) and is saved to `localStorage`, so the app is fully usable before the backend exists. Sample data is in `src/lib/seed.js` (dates are relative to today).
 
-### 4. Project Status Tracking
-- Display a status chart to show project progress.
-- Allow users to track completed and remaining tasks.
+Backend touchpoints are isolated in **`src/lib/api.js`** (login, signup, password reset/change, calendar connections). Replace the mock bodies with `fetch()` calls; the UI already awaits them and shows loading/error states. Put the API base URL in a Vercel env var:
 
-### 5. Export to Spreadsheets
-- Export project information to Excel or Google Sheets.
-- Allows users to organize and review project data outside the application.
+```
+VITE_API_URL=https://your-api.example.com
+```
 
-### 6. User Permissions
-- Assign different permission levels to users.
-- Control who can view, edit, or manage project information.
+and read it with `import.meta.env.VITE_API_URL`. Google/Outlook "Connect" buttons currently toggle state only — they're where your OAuth flow plugs in.
 
-## Project Goal
+## Structure
 
-Our goal is to create a simple and organized platform that makes it easier for individuals and teams to manage projects, track progress, and meet deadlines.
+```
+src/
+  main.jsx            entry — providers + CSS
+  App.jsx             routes, auth guard, page titles
+  lib/                router, store, seed data, api mocks, date + export helpers, design tokens
+  components/         AppLayout (sidebar), Board (drag & drop), forms (dialogs), ui (modal, toast, pill…)
+  pages/              one file per screen
+  styles/
+    global.css        reset, dialogs, form controls
+    pages/*.css       each screen's original CSS, scoped under .pg-<screen>
+    app.css           styles for new interactive elements
+    hover.css         hover / interaction polish
+public/logo.png
+```
+
+No runtime dependencies beyond `react` and `react-dom`; routing, xlsx and iCal export are built in.

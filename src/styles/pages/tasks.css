@@ -1,0 +1,83 @@
+.pg-tasks { width: 1440px;
+  min-height: 900px;
+  background: #0F1424;
+  color: #B4BDD9;
+  font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5; }
+.pg-tasks a { text-decoration: none; color: inherit; }
+.pg-tasks svg { display: block; flex-shrink: 0; }
+.pg-tasks .app { display: flex; width: 1440px; min-height: 900px; }
+.pg-tasks .sidebar { width: 240px; min-height: 900px; flex-shrink: 0;
+  display: flex; flex-direction: column;
+  padding: 24px 16px;
+  background: #151B30; border-right: 1px solid #2A3358; }
+.pg-tasks .sb-brand { display: flex; align-items: center; gap: 12px; padding: 0 8px; height: 40px; }
+.pg-tasks .sb-logo { display: block; width: auto; height: 40px; margin: 0 5.5px; }
+.pg-tasks .sb-name { font-size: 20px; font-weight: 700; color: #F5B942; letter-spacing: -0.02em; }
+.pg-tasks .sb-nav { display: flex; flex-direction: column; gap: 4px; margin-top: 32px; }
+.pg-tasks .nav-item { display: flex; align-items: center; gap: 12px;
+  height: 44px; padding: 0 12px; border-radius: 10px;
+  font-size: 15px; font-weight: 500; color: #9AA5C8; }
+.pg-tasks .nav-item.active { background: #2A2352; color: #C4B5FD; font-weight: 600; }
+.pg-tasks .sb-bottom { margin-top: auto; padding-top: 16px; border-top: 1px solid #2A3358;
+  display: flex; flex-direction: column; gap: 4px; }
+.pg-tasks .sb-user { display: flex; align-items: center; gap: 12px; height: 52px; padding: 0 12px; border-radius: 10px; }
+.pg-tasks .avatar { width: 32px; height: 32px; border-radius: 50%; background: #2A2352; color: #C4B5FD;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700; }
+.pg-tasks .sb-user-name { font-size: 15px; font-weight: 600; color: #F1F4FF; line-height: 20px; }
+.pg-tasks .sb-user-role { font-size: 12px; color: #8791B3; line-height: 16px; }
+.pg-tasks .main { width: 1200px; padding: 40px 48px 48px; }
+.pg-tasks .page-head { display: flex; align-items: flex-start; justify-content: space-between; }
+.pg-tasks .page-title { font-size: 32px; line-height: 40px; font-weight: 800; color: #F1F4FF; letter-spacing: -0.02em; }
+.pg-tasks .page-sub { margin-top: 4px; font-size: 15px; line-height: 22px; color: #B4BDD9; }
+.pg-tasks .page-sub b { font-weight: 600; color: #F1F4FF; }
+.pg-tasks .card { background: #1C2340; border: 1px solid #2A3358; border-radius: 16px; padding: 24px; }
+.pg-tasks .card-title { font-size: 16px; line-height: 24px; font-weight: 700; color: #F1F4FF; }
+.pg-tasks .progress { height: 8px; border-radius: 999px; background: #2A3358; }
+.pg-tasks .progress-fill { height: 8px; border-radius: 999px; background: #8FA8FF; }
+.pg-tasks .pill { padding: 4px 12px; border-radius: 999px; font-size: 12px; line-height: 16px; font-weight: 600; }
+.pg-tasks .page-actions { display: flex; gap: 12px; }
+.pg-tasks .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  height: 44px; padding: 0 20px; border-radius: 10px;
+  font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer;
+  border: 1px solid transparent; }
+.pg-tasks .btn-primary { background: #8FA8FF; color: #0F1424; }
+.pg-tasks .av { width: 22px; height: 22px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 9px; font-weight: 700; }
+.pg-tasks .av-p { background: #2A2352; color: #C4B5FD; }
+.pg-tasks .av-i { background: #14304A; color: #7DC4F5; }
+.pg-tasks .av-w { background: #3A2E12; color: #F5B942; }
+.pg-tasks .av-s { background: #123A2E; color: #34D399; }
+.pg-tasks .tasks-layout { margin-top: 24px; display: flex; gap: 20px; height: 722px; }
+.pg-tasks .tcol { width: 240px; padding: 16px;
+  background: #151B30; border: 1px solid #2A3358; border-radius: 16px; }
+.pg-tasks .col-head { display: flex; align-items: center; justify-content: space-between; height: 28px; }
+.pg-tasks .col-label { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; color: #F1F4FF; }
+.pg-tasks .col-dot { width: 8px; height: 8px; border-radius: 50%; }
+.pg-tasks .col-count { min-width: 24px; height: 22px; padding: 0 8px; border-radius: 999px;
+  display: flex; align-items: center; justify-content: center;
+  background: #2A3358; color: #B4BDD9; font-size: 12px; font-weight: 600; }
+.pg-tasks .col-list { margin-top: 12px; display: flex; flex-direction: column; gap: 8px; }
+.pg-tasks .task { background: #1C2340; border: 1px solid #2A3358; border-radius: 10px; padding: 12px 14px; }
+.pg-tasks .task.selected { border-color: #A78BFA; }
+.pg-tasks .task-title { font-size: 14px; line-height: 20px; font-weight: 600; color: #F1F4FF; }
+.pg-tasks .task-proj { margin-top: 2px; font-size: 12px; line-height: 16px; color: #8791B3; }
+.pg-tasks .task-meta { margin-top: 10px; display: flex; align-items: center; justify-content: space-between; }
+.pg-tasks .task-due { font-size: 12px; line-height: 16px; color: #B4BDD9; }
+.pg-tasks .task-done .task-title { display: flex; align-items: center; gap: 8px; color: #B4BDD9; }
+.pg-tasks .task-done .task-due { color: #8791B3; }
+.pg-tasks .details { width: 324px; padding: 24px; }
+.pg-tasks .d-eyebrow { font-size: 12px; line-height: 16px; font-weight: 700; color: #8791B3; text-transform: uppercase; letter-spacing: 0.08em; }
+.pg-tasks .d-title { margin-top: 8px; font-size: 22px; line-height: 30px; font-weight: 800; color: #F1F4FF; letter-spacing: -0.01em; }
+.pg-tasks .d-proj { margin-top: 8px; display: flex; align-items: center; gap: 8px; font-size: 14px; line-height: 20px; color: #B4BDD9; }
+.pg-tasks .d-rows { margin-top: 24px; }
+.pg-tasks .d-row { display: flex; align-items: center; justify-content: space-between;
+  height: 56px; border-bottom: 1px solid #2A3358; }
+.pg-tasks .d-row:last-child { border-bottom: none; }
+.pg-tasks .d-label { font-size: 14px; line-height: 20px; color: #8791B3; }
+.pg-tasks .d-value { display: flex; align-items: center; gap: 8px; font-size: 14px; line-height: 20px; font-weight: 600; color: #F1F4FF; }
+.pg-tasks .d-value .av { width: 28px; height: 28px; font-size: 11px; }
+.pg-tasks .tag { padding: 4px 10px; border-radius: 8px; background: #2A3358; color: #B4BDD9; font-size: 12px; line-height: 16px; font-weight: 600; }
